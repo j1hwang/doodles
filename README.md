@@ -1,3 +1,3 @@
 # doodles
 
-[Intro to AJAX](../minicourse-ajax-project/index.html)
+[Intro to AJAX](./minicourse-ajax-project/index.html)
