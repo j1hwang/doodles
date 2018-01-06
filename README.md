@@ -1,5 +1,8 @@
-# doodles
+### doodles
+========================
 
-* [AJAX 1](./minicourse-ajax-project/index.html)
+* [Your Moving Companion](./minicourse-ajax-project/index.html) 
+ : first AJAX app
 
-* [AJAX 2](./ajax%20with%20xhr/lesson-1-async-w-xhr/index.html)
+* [Make Asynchronous Requests](./ajax%20with%20xhr/lesson-1-async-w-xhr/index.html)
+ : second one. News articles don't show up under the photo because of the cross-origin HTTP request(not sure).
