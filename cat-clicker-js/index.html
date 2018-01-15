@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat Clicker</title>
+	<style>
+		ul {
+			color: blue;			
+		}
+		ul:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h3>Cat Clicker</h3>
+	<div style='float: left; margin-right: 70px;'>
+		<li> List
+			<ul class="name">Navvy</ul>
+			<ul class="name">Chewie</ul>
+			<ul class="name">Nick</ul>
+			<ul class="name">Sham</ul>
+			<ul class="name">Tiger</ul>
+		</li>
+	</div>
+	<div style='float: left'>
+		<div id="picture" style="float: none">
+			<img id="Navvy" class="cat" src="navvy.jpg" height="400" style='display: none;'>	
+			<img id="Chewie" class="cat" src="chewie.jpg" height="400" style='display: none;'>
+			<img id="Nick" class="cat" src="nick.jpg" height="400" style='display: none;'>
+			<img id="Sham" class="cat" src="sham.jpg" height="400" style='display: none;'>
+			<img id="Tiger" class="cat" src="tiger.jpg" height="400" style='display: none;'>
+		</div>
+		<div style="float: none">
+			<span># of clicks : </span>
+			<span id="num"></span>
+		</div>
+	</div>
+
+	<script>
+		let name = ['Navvy', 'Chewie', 'Nick', 'Sham', 'Tiger'];
+		
+		var list = document.getElementsByClassName('name');
+		var imgs = document.getElementsByClassName('cat');
+		var newElem = document.createElement("figcaption");
+
+		for(var i=0; i<list.length; i++) {
+
+			list[i].addEventListener('click', (function(iCopy) {
+				return function() {
+					for (var j=0; j<list.length; j++) imgs[j].style.display = 'none';
+					imgs[iCopy].style.display = 'inline';
+					document.getElementById('num').innerHTML = clicks[iCopy];
+					newElem.innerHTML = name[iCopy];
+					document.getElementById(name[iCopy]).insertAdjacentElement("beforebegin", newElem);
+				};
+			})(i));
+		}
+
+		var clicks = new Array(list.length);
+		for(var i=0; i<clicks.length; i++) clicks[i] = 0;
+
+		var elems = document.getElementsByClassName('cat');
+		for(var i=0; i<elems.length; i++) {
+			
+			elems[i].addEventListener('click', (function(iCopy){
+				return function() {
+					document.getElementById('num').innerHTML = ++clicks[iCopy];	
+				}				
+			})(i));
+		}
+		
+	</script>
+</body>
+</html>
