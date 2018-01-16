@@ -11,4 +11,5 @@
  : learning JS design patterns.
 
 * [Udacity Retain](./model-view-octopus/index.html)  
- : learning MVO (MVC, MVP, MVVM, or MV-whatever)
+ : learning MVO (MVC, MVP, MVVM, or MV-whatever)  
+ : localStorage.clear()
