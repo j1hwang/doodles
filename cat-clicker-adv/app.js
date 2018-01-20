@@ -7,22 +7,22 @@ var model = {
 	},
 	{
 		name: 'Chewie',
-		imgURL: './images/Chewie.jpg',
+		imgURL: './images/chewie.jpg',
 		numOfClicks: 0
 	},
 	{
 		name: 'Nick',
-		imgURL: './images/Nick.jpg',
+		imgURL: './images/nick.jpg',
 		numOfClicks: 0
 	},
 	{
 		name: 'Sham',
-		imgURL: './images/Sham.jpg',
+		imgURL: './images/sham.jpg',
 		numOfClicks: 0
 	},
 	{
 		name: 'Tiger',
-		imgURL: './images/Tiger.jpg',
+		imgURL: './images/tiger.jpg',
 		numOfClicks: 0
 	}
 	]
