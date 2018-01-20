@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cat Clicker</title>
+	<style>
+		li { list-style-type: none; }
+		ul { color: blue; }
+		ul:hover { text-decoration: underline; }
+		.input { float: right; margin-left: 10px;}
+	</style>
+</head>
+<body>	
+	<div style='float: left; margin: 30px 50px 0px 0px;'>
+		<li id="list"></li>
+	</div>
+	<div style='float: left'>
+		<div style="float: left">
+			<span># of clicks : </span>
+			<span id="num"></span>
+		</div>
+		<div style="float: right">
+			<button id="admin">admin</button>
+		</div>
+		<br>&nbsp;
+		<div id="photo" style="float: none"></div>
+		<div class="div hidden" id="modify" style="display: none;">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td><input id="name" type="text" size="10"></td>
+				</tr>
+				<tr>
+					<td>img URL</td>
+					<td><input id="url" type="text" size="70"></td>
+				</tr>
+				<tr>
+					<td># Clicks</td>
+					<td><input id="clicks" type="text" size="2" ></td>
+				</tr>
+			</table>
+			<button class="input" id="cancel">cancel</button>
+			<button class="input" id="save">save</button>
+		</div>
+	</div>
+</body>
+</html>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="app.js"></script>
