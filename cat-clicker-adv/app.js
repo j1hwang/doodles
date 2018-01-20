@@ -41,23 +41,30 @@ var octopus = {
 	increase: function(catNum) {
 		model.cats[catNum].numOfClicks++;
 		view.render_number(catNum);
+	},
+	update: function(catNum, name, imgURL, numOfClicks) {
+		console.log(catNum);
+		model.cats[catNum].name = name;
+		model.cats[catNum].imgURL = imgURL;
+		model.cats[catNum].numOfClicks = numOfClicks;
 	}
 };
 
 var view = {
 	init: function() {
 		view.render_list();
-		this.render_detail(0);
+		view.render_detail(0);
 	},
 	render_list: function() {
 		var cats = octopus.getCats();
 		var many = cats.length;
+		$('#list').empty();
 		for(var i=0; i<many; i++) {
 			$('#list').append(`<ul id="cat${i}">${cats[i].name}</ul>`);
 			$('#cat'+i).click( (function(catNum) {
 				return function() {
 					view.render_detail(catNum);
-				}
+				};
 			})(i) );
 		}
 	},
@@ -70,35 +77,46 @@ var view = {
 			octopus.increase(catNum);
 		});
 		
-		this.render_number(catNum);
+		view.render_number(catNum);
 
-     
+		// set admin button
+		$('#admin').unbind();
+     	$('#admin').click( function() { $('#secret').toggle(); });
+	
+		// set default input value
+		$('#name').val(cats[catNum].name);
+		$('#url').val(cats[catNum].imgURL);
 
-		$('#admin').click( function() { $('.hidden').toggle(); });
-
-		// $('#name').val(cats[catNum].name);
-		// // $('#url').val(cats[catNum].imgURL);
-
-
-		// $('#cancel').click( function() { 
-		// 	$('.hidden').toggle(); 
-		// 	// $('#name').attr('value', cats[catNum].name);
-		// 	// $('#url').attr('value', cats[catNum].imgURL);
-		// 	// $('#clicks').attr('value', cats[catNum].numOfClicks);
-		// });
+		// set cancel button
+		$('#cancel').unbind();
+		$('#cancel').click( function() { 
+			$('#secret').toggle(); 
+			$('#name').val(cats[catNum].name);
+			$('#url').val(cats[catNum].imgURL);
+			$('#clicks').val(cats[catNum].numOfClicks);
+		});
 		
-		// $('#save').click( function() {
+		// set save button
+		$('#save').unbind();
+		$('#save').click( function() {
+			var name = $('#name').val();
+			var url = $('#url').val();
+			var clicks = parseInt($('#clicks').val());
 
-		// 	$('.hidden').toggle();
-		// });	
+			octopus.update(catNum, name, url, clicks);
+
+			view.render_list();
+			view.render_detail(catNum);
+			$('#secret').toggle();
+		});	
 		
 	},
 	render_number: function(catNum) {
+
 		var cats = octopus.getCats();
 		var count = octopus.getCount(catNum);
 		$('#num').text(count);
 		$('#clicks').val(cats[catNum].numOfClicks);
-	},
-
+	}
 };
 octopus.init();
