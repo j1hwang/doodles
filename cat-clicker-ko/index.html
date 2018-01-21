@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cat Clicker</title>
+</head>
+<body>	
+	<div data-bind="foreach: catList">
+		<li data-bind="text: name, click: $parent.setCat"></li>
+	</div>	
+	<div data-bind="with: currentCat">
+		<h2 data-bind="text: name"></h2>
+		<h4 data-bind="text: level"></h4>
+		<div data-bind="text: clickCount"></div>
+		<img data-bind="attr: {src: imgSrc}, click: $parent.incrementCounter" src="" alt="cute cat">
+		<h2>Nicknames: </h2> 
+		<ul data-bind="foreach: nicknames">
+			<li data-bind="text: $data"></li>
+		</ul>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
