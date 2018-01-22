@@ -11,7 +11,10 @@
  : JavaScript design patterns. MVO. MVVM.   
 
 * [Udacity Retain](./model-view-octopus/index.html)  
- : learning MVO concept. - `localStorage.clear()`  
+ : Learning MVO concept. - `localStorage.clear()`  
  
 * [Brighton Times](./responsive-design/index.html)  
  : Responsive site design practice.
+
+* [To-do List Application](./todo/index.html)  
+ : First hands on Backbone.js ([Original App](http://todomvc.com/) is made by Addy Osmani)
