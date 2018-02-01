@@ -22,5 +22,5 @@
 * [Service Chooser](./services-chooser/index.html)  
  : Practices on Backbone.js by following tutorial ([Link](https://tutorialzine.com/2013/04/services-chooser-backbone-js/))  
 
-* Python Webserver - [From scratch](./restaurant-python/webserver.py), [With Flask](./restaurant-flask/project.py), [OAuth](./oauth-facebook/project.py), [API mashup & endpoint](./api-endpoints) with SQLAlchemy   
+* Python Webserver - [From scratch](https://github.com/j1hwang/doodles/blob/master/restaurant-python/webserver.py), [With Flask](https://github.com/j1hwang/doodles/blob/master/restaurant-flask/project.py), [OAuth](https://github.com/j1hwang/doodles/blob/master/oauth-facebook/project.py), [API mashup & endpoint](https://github.com/j1hwang/doodles/tree/master/api-endpoints) with SQLAlchemy   
  : Configuring Linux Web Servers, Authentication & Authorization: OAuth, Designing RESTful APIs  
