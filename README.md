@@ -24,4 +24,7 @@
 
 * Python Webserver with SQLAlchemy - [From scratch](https://github.com/j1hwang/doodles/blob/master/restaurant-python/webserver.py), [With Flask](https://github.com/j1hwang/doodles/blob/master/restaurant-flask/project.py), [OAuth](https://github.com/j1hwang/doodles/blob/master/oauth-facebook/project.py), [API mashup & endpoint](https://github.com/j1hwang/doodles/tree/master/api-endpoints),    
  : Lessons from 'Configuring Linux Web Servers', 'Authentication & Authorization: OAuth', 'Designing RESTful APIs'  
- : More on OAuth and APIs [Google OAuth](https://github.com/udacity/APIs/tree/master/Lesson_4/10_Adding%20OAuth%202.0%20for%20Authentication), [Rate Limiting](https://github.com/udacity/APIs/tree/master/Lesson_4/12_Rate%20Limiting)  
+ : More on OAuth and APIs [Google OAuth](https://github.com/udacity/APIs/tree/master/Lesson_4/10_Adding%20OAuth%202.0%20for%20Authentication), [Rate Limiting](https://github.com/udacity/APIs/tree/master/Lesson_4/12_Rate%20Limiting)   
+
+* [JavaScirpt Testing - Jasmine](./testing-jasmine/SpecRunner.html)  
+ : Lesson about red-green refactor cycle  
