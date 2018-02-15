@@ -28,3 +28,6 @@
 
 * [JavaScirpt Testing - Jasmine](./testing-jasmine/SpecRunner.html)  
  : Lesson about red-green refactor cycle  
+  
+* [Playing with Google Map APIs](./googlemap)  
+ : [Geocoding](./googlemap/geocoding.html), [Basic Marker](./googlemap/marker.html), [Map Styling](./googlemap/marker-style.html), [Info Window Imagery](./googlemap/marker-imagery.html), [Marker On&Off](./googlemap/marker-onoff.html), [Polygon](./googlemap/polygon.html), [Distance](./googlemap/distance.html)
